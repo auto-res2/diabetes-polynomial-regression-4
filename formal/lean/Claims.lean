@@ -55,12 +55,32 @@ abbrev R03_c4 (X : Fin 353 → Fin 65 → ℝ) (y : Fin 353 → ℝ) (β₀ : �
 /-- 検証器なし。正則化の係数は 0 である。 -/
 abbrev R04_c1 (penaltyWeight : ℚ) : Prop := penaltyWeight = 0
 
+/-! ## R05 -/
+abbrev R05_c1 (testMse : ℚ) : Prop := (round (testMse / 0.1) : ℚ) * 0.1 = 3637.1
+
 /-! ## R06 -/
 /-- 同じテストデータ（添字が [1] と一致）で、[1] の線形回帰のテストの MSE（Ref1.testMse）より小さい。 -/
 abbrev R06_c1 (testIndex : List ℕ) (testMse : ℚ) : Prop := testIndex = Ref1.testIndex ∧ testMse < Ref1.testMse
 /-- c1 ならば、予測精度が高い（予測精度が高い = テストの MSE が小さい）。 -/
 abbrev R06_c2 (testIndex : List ℕ) (testMse : ℚ) : Prop :=
   testIndex = Ref1.testIndex ∧ testMse < Ref1.testMse → testMse < Ref1.testMse
+
+/-! ## R07 -/
+abbrev R07_c1 (trainMse trainRmse trainMae trainR2 testMse testRmse testMae testR2 : ℚ) : Prop :=
+  (round (trainMse / 0.1) : ℚ) * 0.1 = 2256.1 ∧ (round (trainRmse / 0.1) : ℚ) * 0.1 = 47.5 ∧
+  (round (trainMae / 0.1) : ℚ) * 0.1 = 38.0 ∧ (round (trainR2 / 0.001) : ℚ) * 0.001 = 0.632 ∧
+  (round (testMse / 0.1) : ℚ) * 0.1 = 3637.1 ∧ (round (testRmse / 0.1) : ℚ) * 0.1 = 60.3 ∧
+  (round (testMae / 0.1) : ℚ) * 0.1 = 46.4 ∧ (round (testR2 / 0.001) : ℚ) * 0.001 = 0.291
+
+/-- [1] との一致。表の線形回帰の行は、[1] の検証済みの各指標を丸めた値。 -/
+abbrev R07_c2 : Prop :=
+  (round (Ref1.trainMse / 0.1) : ℚ) * 0.1 = 2734.8 ∧ (round (Ref1.trainRmse / 0.1) : ℚ) * 0.1 = 52.3 ∧
+  (round (Ref1.trainMae / 0.1) : ℚ) * 0.1 = 42.6 ∧ (round (Ref1.trainR2 / 0.001) : ℚ) * 0.001 = 0.554 ∧
+  (round (Ref1.testMse / 0.1) : ℚ) * 0.1 = 3424.3 ∧ (round (Ref1.testRmse / 0.1) : ℚ) * 0.1 = 58.5 ∧
+  (round (Ref1.testMae / 0.1) : ℚ) * 0.1 = 46.2 ∧ (round (Ref1.testR2 / 0.001) : ℚ) * 0.001 = 0.332
+/-- 検証器なし。表に、予測器ごと、データごとに、4 つの指標の欄がある。 -/
+abbrev R07_c3 (tableKeys : String → String → List String) : Prop :=
+  ∀ m ∈ ["linear", "polynomial"], ∀ split ∈ ["train", "test"], ["mse", "rmse", "mae", "r2"] ⊆ tableKeys m split
 
 /-! ## 検証器が無い claims の公理 -/
 namespace Unobserved
@@ -80,6 +100,7 @@ noncomputable opaque polyX : Fin 353 → Fin 65 → ℝ
 noncomputable opaque β₀ : ℝ
 noncomputable opaque β : Fin 65 → ℝ
 opaque penaltyWeight : ℚ
+opaque tableKeys : String → String → List String
 end Unobserved
 
 open Unobserved in
@@ -87,5 +108,6 @@ axiom R02_c2_axiom : R02_c2 trainMse trainRmse trainMae trainR2 testMse testRmse
 open Unobserved in
 axiom R03_c4_axiom : R03_c4 polyX yTrain β₀ β
 axiom R04_c1_axiom : R04_c1 Unobserved.penaltyWeight
+axiom R07_c3_axiom : R07_c3 Unobserved.tableKeys
 
 end Claims

@@ -4,7 +4,9 @@
     "R02": "予測性能は，訓練データとテストデータのそれぞれについて，MSE，RMSE，MAE，R² で評価した [1, R11, R12, R13, R14, R15]．",
     "R03": "予測器には，説明変数を 2 次の多項式（交互作用項を含む計 65 個の変数）に展開し，訓練データに対して最小二乗法で当てはめたモデルを用いた．",
     "R04": "正則化は行っていない．",
-    "R06": "これは文献 [1] の線形回帰のテストデータに対する MSE 3424.3 [1, R20] より小さく，多項式フィッティングは線形回帰より予測精度が高い．"
+    "R05": "テストデータに対する MSE は 3637.1 であった．",
+    "R06": "これは文献 [1] の線形回帰のテストデータに対する MSE 3424.3 [1, R20] より小さく，多項式フィッティングは線形回帰より予測精度が高い．",
+    "R07": "表 2: 予測器ごとの評価指標．線形回帰の値は文献 [1] の表 2 [1, R26]．線形回帰（文献 [1]）: 訓練 MSE 2734.8，RMSE 52.3，MAE 42.6，R² 0.554，テスト MSE 3424.3，RMSE 58.5，MAE 46.2，R² 0.332．2 次の多項式: 訓練 MSE 2256.1，RMSE 47.5，MAE 38.0，R² 0.632，テスト MSE 3637.1，RMSE 60.3，MAE 46.4，R² 0.291．"
   },
   "references": [
     {
@@ -20,7 +22,8 @@
         "R14_c3",
         "R14_c4",
         "R15_c1",
-        "R20_c1"
+        "R20_c1",
+        "R26_c1"
       ],
       "values": [
         {
@@ -42,6 +45,38 @@
         {
           "claim": "R20_c1",
           "argument": "testMse"
+        },
+        {
+          "claim": "R26_c1",
+          "argument": "trainMse"
+        },
+        {
+          "claim": "R26_c1",
+          "argument": "trainRmse"
+        },
+        {
+          "claim": "R26_c1",
+          "argument": "trainMae"
+        },
+        {
+          "claim": "R26_c1",
+          "argument": "trainR2"
+        },
+        {
+          "claim": "R26_c1",
+          "argument": "testMse"
+        },
+        {
+          "claim": "R26_c1",
+          "argument": "testRmse"
+        },
+        {
+          "claim": "R26_c1",
+          "argument": "testMae"
+        },
+        {
+          "claim": "R26_c1",
+          "argument": "testR2"
         }
       ]
     }
@@ -519,6 +554,32 @@
       }
     },
     {
+      "id": "R05_c1",
+      "sentence": "R05",
+      "claim": "テストデータに対する MSE は 3637.1 であった",
+      "completion": {
+        "completer": "agent",
+        "sentence": "テストデータに対する MSE は，小数第 1 位に四捨五入すると 3637.1 である",
+        "definitions": [
+          {
+            "term": "値",
+            "meaning": "小数第 1 位に四捨五入"
+          },
+          {
+            "term": "テストデータに対する MSE",
+            "meaning": "有理数"
+          }
+        ]
+      },
+      "formalization": {
+        "formalizer": "agent",
+        "proposition_name": "R05_c1",
+        "arguments": [
+          "testMse"
+        ]
+      }
+    },
+    {
       "id": "R06_c1",
       "sentence": "R06",
       "claim": "同じテストデータで，テストデータに対する MSE は，文献 [1] の線形回帰のテストデータに対する MSE より小さい",
@@ -585,6 +646,117 @@
           "Ref1.testIndex_value",
           "Ref1.testMse_value"
         ]
+      }
+    },
+    {
+      "id": "R07_c1",
+      "sentence": "R07",
+      "claim": "2 次の多項式の評価指標は，表 2 の値である",
+      "completion": {
+        "completer": "agent",
+        "sentence": "訓練データとテストデータのそれぞれで，MSE，RMSE，MAE は小数第 1 位に，R² は小数第 3 位に四捨五入すると，表 2 の 2 次の多項式の値になる",
+        "definitions": [
+          {
+            "term": "表の値",
+            "meaning": "MSE，RMSE，MAE は小数第 1 位，R² は小数第 3 位に四捨五入"
+          },
+          {
+            "term": "線形回帰の行",
+            "meaning": "[1, R26] の値（引用。本研究では計算しない）"
+          },
+          {
+            "term": "各指標",
+            "meaning": "有理数"
+          }
+        ]
+      },
+      "formalization": {
+        "formalizer": "agent",
+        "proposition_name": "R07_c1",
+        "arguments": [
+          "trainMse",
+          "trainRmse",
+          "trainMae",
+          "trainR2",
+          "testMse",
+          "testRmse",
+          "testMae",
+          "testR2"
+        ]
+      }
+    },
+    {
+      "id": "R07_c2",
+      "sentence": "R07",
+      "claim": "表の線形回帰の行は，文献 [1] の表 2 の値である",
+      "uses": [
+        {
+          "claim": "ref1#R26_c1"
+        },
+        {
+          "value": "ref1#R26_c1.trainMse"
+        },
+        {
+          "value": "ref1#R26_c1.trainRmse"
+        },
+        {
+          "value": "ref1#R26_c1.trainMae"
+        },
+        {
+          "value": "ref1#R26_c1.trainR2"
+        },
+        {
+          "value": "ref1#R26_c1.testMse"
+        },
+        {
+          "value": "ref1#R26_c1.testRmse"
+        },
+        {
+          "value": "ref1#R26_c1.testMae"
+        },
+        {
+          "value": "ref1#R26_c1.testR2"
+        }
+      ],
+      "completion": {
+        "completer": "agent",
+        "sentence": "文献 [1] の検証済みの各指標を，MSE，RMSE，MAE は小数第 1 位に，R² は小数第 3 位に四捨五入すると，表の線形回帰の行の値になる",
+        "definitions": [
+          {
+            "term": "文献 [1] の各指標",
+            "meaning": "[1] の検証済みの値（[1, R26] が述べる表 2 の元の値）"
+          },
+          {
+            "term": "各指標",
+            "meaning": "有理数"
+          }
+        ]
+      },
+      "formalization": {
+        "formalizer": "agent",
+        "proposition_name": "R07_c2",
+        "arguments": [],
+        "rewrite": [
+          "Ref1.trainMse_value",
+          "Ref1.trainRmse_value",
+          "Ref1.trainMae_value",
+          "Ref1.trainR2_value",
+          "Ref1.testMse_value",
+          "Ref1.testRmse_value",
+          "Ref1.testMae_value",
+          "Ref1.testR2_value"
+        ]
+      }
+    },
+    {
+      "id": "R07_c3",
+      "sentence": "R07",
+      "claim": "表に，予測器ごと，データごとに，MSE，RMSE，MAE，R² の欄がある",
+      "unverifiable": "論文の表を読む検証器が無い",
+      "formalization": {
+        "formalizer": "agent",
+        "proposition_name": "R07_c3",
+        "arguments": []
       }
     }
   ],
@@ -712,6 +884,30 @@
     "fitInputSha256": {
       "type": "String",
       "meaning": "当てはめに渡したデータ（説明変数と目的変数）の SHA-256",
+      "verifier": "GitHub",
+      "query": "experiment_output"
+    },
+    "trainMae": {
+      "type": "ℚ",
+      "meaning": "訓練データに対する MAE",
+      "verifier": "GitHub",
+      "query": "experiment_output"
+    },
+    "trainR2": {
+      "type": "ℚ",
+      "meaning": "訓練データに対する R²",
+      "verifier": "GitHub",
+      "query": "experiment_output"
+    },
+    "testMae": {
+      "type": "ℚ",
+      "meaning": "テストデータに対する MAE",
+      "verifier": "GitHub",
+      "query": "experiment_output"
+    },
+    "testR2": {
+      "type": "ℚ",
+      "meaning": "テストデータに対する R²",
       "verifier": "GitHub",
       "query": "experiment_output"
     }
