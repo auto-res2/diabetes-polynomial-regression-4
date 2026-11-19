@@ -1,0 +1,66 @@
+\documentclass[9pt,a4paper,twocolumn]{ltjsarticle}
+\usepackage[top=20mm,bottom=22mm,left=17mm,right=17mm,columnsep=8mm]{geometry}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\input{values.tex}
+% 各文の ID。claims.json の sentences の ID と同じ
+% 各文の ID。この文の最初の claims の行（本リポジトリの claims.json、commit @@OWN@@）へリンクする
+\newcommand{\sid}[1]{\textsuperscript{\textsf{\scriptsize[\href{https://github.com/auto-res2/diabetes-polynomial-regression-4/blob/@@OWN@@/formal/claims.json\#L\csname line#1\endcsname}{#1}]}}}
+\expandafter\def\csname lineR01\endcsname{32}
+\expandafter\def\csname lineR02\endcsname{98}
+\expandafter\def\csname lineR03\endcsname{136}
+\expandafter\def\csname lineR04\endcsname{185}
+\expandafter\def\csname lineR05\endcsname{196}
+\expandafter\def\csname lineR06\endcsname{222}
+\expandafter\def\csname lineR07\endcsname{265}
+% 論文の途中からの抜粋: 節と頁の番号を途中から始める
+\setcounter{section}{3}
+\setcounter{page}{3}
+\setcounter{equation}{2}
+\setcounter{table}{1}
+\setcounter{footnote}{1}
+
+% 文献 [1] の claims.json の、引用した claims の行へのリンク
+\newcommand{\clm}[2]{\href{https://github.com/auto-res2/diabetes-linear-regression-6/blob/bc1e74f/formal/claims.json\#L#2}{#1}}
+\begin{document}
+
+\twocolumn[{
+\begin{center}
+{\Large\bfseries 糖尿病データセットに対する多項式回帰の予測性能}\\[2mm]
+{\normalsize auto-res2}\\[1mm]
+{\small （「4 実験設定」および「5 結果」の抜粋）}
+\end{center}
+\vspace{3mm}
+}]
+
+\section{実験設定}
+
+\sid{R01}データセット，前処理，訓練データとテストデータへの分割は，文献~\cite{report1} と同じとした~\cite[\clm{R01}{32}, \clm{R04}{323}, \clm{R06}{453}]{report1}．\sid{R02}予測性能は，訓練データとテストデータのそれぞれについて，MSE，RMSE，MAE，$R^2$ で評価した~\cite[\clm{R11}{709}, \clm{R12}{742}, \clm{R13}{762}, \clm{R14}{782}, \clm{R15}{897}]{report1}．\sid{R03}予測器には，説明変数を 2 次の多項式（交互作用項を含む計 \NPolyFeatures{} 個の変数）に展開し，訓練データに対して最小二乗法で当てはめたモデルを用いた．\sid{R04}正則化は行っていない．
+
+\section{結果}
+
+\sid{R05}テストデータに対する MSE は \TestMse{} であった．\sid{R06}これは文献~\cite{report1} の線形回帰のテストデータに対する MSE 3424.3~\cite[\clm{R20}{1049}]{report1} より小さく，多項式フィッティングは線形回帰より予測精度が高い．
+
+\begin{table}[t]
+\centering
+\caption{\sid{R07}予測器ごとの評価指標．線形回帰の値は文献~\cite{report1} の表 2~\cite[\clm{R26}{1620}]{report1}．}
+\label{tab:metrics}
+\begin{tabular}{llrrrr}
+\toprule
+予測器 & データ & MSE & RMSE & MAE & $R^2$ \\
+\midrule
+線形回帰~\cite{report1} & 訓練 & 2734.8 & 52.3 & 42.6 & 0.554 \\
+ & テスト & 3424.3 & 58.5 & 46.2 & 0.332 \\
+2 次の多項式 & 訓練 & \TrainMse & \TrainRmse & \TrainMae & \TrainRsq \\
+ & テスト & \TestMse & \TestRmse & \TestMae & \TestRsq \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{thebibliography}{9}
+\small
+\bibitem{report1} auto-res2: 糖尿病データセットに対する線形回帰モデルの予測性能, \url{https://github.com/auto-res2/diabetes-linear-regression-6}, commit bc1e74f.
+\end{thebibliography}
+
+\end{document}
