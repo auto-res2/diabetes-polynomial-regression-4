@@ -103,6 +103,11 @@
           "observedSha256",
           "dataSha256"
         ]
+      },
+      "result": {
+        "status": "verified",
+        "verdict": "真",
+        "axioms": []
       }
     },
     {
@@ -137,6 +142,13 @@
         "rewrite": [
           "Ref1.observedSha256_value"
         ]
+      },
+      "result": {
+        "status": "verified",
+        "verdict": "真",
+        "axioms": [
+          "Ref1.observedSha256_value"
+        ]
       }
     },
     {
@@ -168,6 +180,13 @@
         "rewrite": [
           "Ref1.observedSha256_value"
         ]
+      },
+      "result": {
+        "status": "verified",
+        "verdict": "真",
+        "axioms": [
+          "Ref1.observedSha256_value"
+        ]
       }
     },
     {
@@ -191,6 +210,11 @@
           "modelInputXSha256",
           "loadedXSha256"
         ]
+      },
+      "result": {
+        "status": "verified",
+        "verdict": "真",
+        "axioms": []
       }
     },
     {
@@ -228,6 +252,13 @@
         "rewrite": [
           "Ref1.modelInputXSha256_value"
         ]
+      },
+      "result": {
+        "status": "verified",
+        "verdict": "真",
+        "axioms": [
+          "Ref1.modelInputXSha256_value"
+        ]
       }
     },
     {
@@ -262,6 +293,13 @@
         "rewrite": [
           "Ref1.modelInputXSha256_value"
         ]
+      },
+      "result": {
+        "status": "verified",
+        "verdict": "真",
+        "axioms": [
+          "Ref1.modelInputXSha256_value"
+        ]
       }
     },
     {
@@ -289,6 +327,15 @@
           "splitSeed",
           "nTest",
           "nSamples"
+        ]
+      },
+      "result": {
+        "status": "verified",
+        "verdict": "真",
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
         ]
       }
     },
@@ -329,6 +376,14 @@
           "Ref1.trainIndex_value",
           "Ref1.testIndex_value"
         ]
+      },
+      "result": {
+        "status": "verified",
+        "verdict": "真",
+        "axioms": [
+          "Ref1.testIndex_value",
+          "Ref1.trainIndex_value"
+        ]
       }
     },
     {
@@ -367,6 +422,17 @@
           "Ref1.trainIndex_value",
           "Ref1.testIndex_value"
         ]
+      },
+      "result": {
+        "status": "verified",
+        "verdict": "真",
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "Ref1.testIndex_value",
+          "Ref1.trainIndex_value",
+          "propext"
+        ]
       }
     },
     {
@@ -397,6 +463,13 @@
         "arguments": [
           "outputKeys"
         ]
+      },
+      "result": {
+        "status": "verified",
+        "verdict": "真",
+        "axioms": [
+          "propext"
+        ]
       }
     },
     {
@@ -422,6 +495,11 @@
         "formalizer": "agent",
         "proposition_name": "R02_c2",
         "arguments": []
+      },
+      "result": {
+        "status": "unverifiable",
+        "reason": "コードの振る舞いを判定する検証器が無い",
+        "axiom": "R02_c2_axiom"
       }
     },
     {
@@ -452,6 +530,15 @@
           "testMse",
           "rmseSquaredTolerance"
         ]
+      },
+      "result": {
+        "status": "verified",
+        "verdict": "真",
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
       }
     },
     {
@@ -475,6 +562,11 @@
           "polyDegree",
           "nPolyFeatures"
         ]
+      },
+      "result": {
+        "status": "verified",
+        "verdict": "真",
+        "axioms": []
       }
     },
     {
@@ -501,6 +593,11 @@
         "arguments": [
           "nInteractionFeatures"
         ]
+      },
+      "result": {
+        "status": "verified",
+        "verdict": "真",
+        "axioms": []
       }
     },
     {
@@ -524,6 +621,11 @@
           "fitInputSha256",
           "trainDataSha256"
         ]
+      },
+      "result": {
+        "status": "verified",
+        "verdict": "真",
+        "axioms": []
       }
     },
     {
@@ -540,6 +642,11 @@
         "formalizer": "agent",
         "proposition_name": "R03_c4",
         "arguments": []
+      },
+      "result": {
+        "status": "unverifiable",
+        "reason": "コードの振る舞いを判定する検証器が無い",
+        "axiom": "R03_c4_axiom"
       }
     },
     {
@@ -551,6 +658,11 @@
         "formalizer": "agent",
         "proposition_name": "R04_c1",
         "arguments": []
+      },
+      "result": {
+        "status": "unverifiable",
+        "reason": "コードの振る舞いを判定する検証器が無い",
+        "axiom": "R04_c1_axiom"
       }
     },
     {
@@ -576,6 +688,15 @@
         "proposition_name": "R05_c1",
         "arguments": [
           "testMse"
+        ]
+      },
+      "result": {
+        "status": "verified",
+        "verdict": "真",
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
         ]
       }
     },
@@ -619,6 +740,17 @@
           "Ref1.testIndex_value",
           "Ref1.testMse_value"
         ]
+      },
+      "result": {
+        "status": "verified",
+        "verdict": "偽",
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "Ref1.testIndex_value",
+          "Ref1.testMse_value",
+          "propext"
+        ]
       }
     },
     {
@@ -645,6 +777,17 @@
         "rewrite": [
           "Ref1.testIndex_value",
           "Ref1.testMse_value"
+        ]
+      },
+      "result": {
+        "status": "verified",
+        "verdict": "真",
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "Ref1.testIndex_value",
+          "Ref1.testMse_value",
+          "propext"
         ]
       }
     },
@@ -682,6 +825,15 @@
           "testRmse",
           "testMae",
           "testR2"
+        ]
+      },
+      "result": {
+        "status": "verified",
+        "verdict": "真",
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
         ]
       }
     },
@@ -746,6 +898,23 @@
           "Ref1.testMae_value",
           "Ref1.testR2_value"
         ]
+      },
+      "result": {
+        "status": "verified",
+        "verdict": "真",
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "Ref1.testMae_value",
+          "Ref1.testMse_value",
+          "Ref1.testR2_value",
+          "Ref1.testRmse_value",
+          "Ref1.trainMae_value",
+          "Ref1.trainMse_value",
+          "Ref1.trainR2_value",
+          "Ref1.trainRmse_value",
+          "propext"
+        ]
       }
     },
     {
@@ -757,6 +926,11 @@
         "formalizer": "agent",
         "proposition_name": "R07_c3",
         "arguments": []
+      },
+      "result": {
+        "status": "unverifiable",
+        "reason": "論文の表を読む検証器が無い",
+        "axiom": "R07_c3_axiom"
       }
     }
   ],
@@ -768,6 +942,11 @@
       "query": "artifact_file_sha256",
       "args": {
         "path": "outputs/data/diabetes.tab.txt"
+      },
+      "verified": {
+        "value": "4733febee697862c22139cdac87478a300ce0d101593deb07ed6c0f3328a99cd",
+        "mode": "full",
+        "verify_run": "44579147279"
       }
     },
     "dataSha256": {
@@ -778,79 +957,625 @@
       "args": {
         "path": "src/download_data.py",
         "pattern": "DATA_SHA256 = \"([0-9a-f]{64})\""
+      },
+      "verified": {
+        "value": "4733febee697862c22139cdac87478a300ce0d101593deb07ed6c0f3328a99cd",
+        "mode": "full",
+        "verify_run": "44579147279"
       }
     },
     "modelInputXSha256": {
       "type": "String",
       "meaning": "モデルに渡した説明変数の SHA-256",
       "verifier": "GitHub",
-      "query": "experiment_output"
+      "query": "experiment_output",
+      "verified": {
+        "value": "ae560a6efb1b86fbce564225a40502c1f85dcbbc7acb6f5830bac71c5aa7bfec",
+        "mode": "full",
+        "verify_run": "44579147279"
+      }
     },
     "loadedXSha256": {
       "type": "String",
       "meaning": "ファイルから読んだ説明変数（訓練データの行）の SHA-256",
       "verifier": "GitHub",
-      "query": "experiment_output"
+      "query": "experiment_output",
+      "verified": {
+        "value": "ae560a6efb1b86fbce564225a40502c1f85dcbbc7acb6f5830bac71c5aa7bfec",
+        "mode": "full",
+        "verify_run": "44579147279"
+      }
     },
     "splitSeed": {
       "type": "ℕ",
       "meaning": "分割の乱数のシード",
       "verifier": "GitHub",
-      "query": "experiment_output"
+      "query": "experiment_output",
+      "verified": {
+        "value": 0,
+        "mode": "full",
+        "verify_run": "44579147279"
+      }
     },
     "nTest": {
       "type": "ℕ",
       "meaning": "テストデータの件数",
       "verifier": "GitHub",
-      "query": "experiment_output"
+      "query": "experiment_output",
+      "verified": {
+        "value": 89,
+        "mode": "full",
+        "verify_run": "44579147279"
+      }
     },
     "nSamples": {
       "type": "ℕ",
       "meaning": "データセットの行数",
       "verifier": "GitHub",
-      "query": "experiment_output"
+      "query": "experiment_output",
+      "verified": {
+        "value": 442,
+        "mode": "full",
+        "verify_run": "44579147279"
+      }
     },
     "trainIndex": {
       "type": "List ℕ",
       "meaning": "訓練データに入った行の番号",
       "verifier": "GitHub",
-      "query": "experiment_output"
+      "query": "experiment_output",
+      "verified": {
+        "value": [
+          74,
+          26,
+          45,
+          389,
+          154,
+          4,
+          386,
+          225,
+          327,
+          264,
+          8,
+          190,
+          5,
+          371,
+          200,
+          313,
+          7,
+          325,
+          366,
+          22,
+          68,
+          437,
+          20,
+          353,
+          281,
+          14,
+          300,
+          240,
+          175,
+          405,
+          153,
+          75,
+          64,
+          55,
+          135,
+          329,
+          81,
+          316,
+          369,
+          328,
+          414,
+          421,
+          361,
+          415,
+          232,
+          224,
+          252,
+          254,
+          418,
+          106,
+          278,
+          63,
+          336,
+          378,
+          387,
+          430,
+          89,
+          93,
+          245,
+          272,
+          241,
+          92,
+          18,
+          145,
+          150,
+          322,
+          393,
+          297,
+          231,
+          66,
+          380,
+          412,
+          140,
+          101,
+          345,
+          247,
+          363,
+          17,
+          146,
+          315,
+          220,
+          30,
+          114,
+          235,
+          103,
+          219,
+          274,
+          176,
+          191,
+          116,
+          168,
+          367,
+          120,
+          218,
+          112,
+          303,
+          136,
+          308,
+          221,
+          126,
+          196,
+          332,
+          424,
+          133,
+          33,
+          419,
+          162,
+          34,
+          44,
+          97,
+          85,
+          61,
+          167,
+          199,
+          173,
+          229,
+          236,
+          433,
+          376,
+          250,
+          108,
+          407,
+          46,
+          357,
+          372,
+          263,
+          73,
+          137,
+          422,
+          246,
+          253,
+          29,
+          181,
+          374,
+          301,
+          51,
+          365,
+          391,
+          217,
+          432,
+          27,
+          2,
+          259,
+          156,
+          255,
+          417,
+          346,
+          138,
+          212,
+          104,
+          310,
+          306,
+          311,
+          215,
+          348,
+          189,
+          214,
+          35,
+          230,
+          204,
+          234,
+          293,
+          239,
+          210,
+          67,
+          24,
+          295,
+          216,
+          223,
+          129,
+          111,
+          166,
+          349,
+          40,
+          317,
+          79,
+          431,
+          350,
+          13,
+          364,
+          436,
+          228,
+          161,
+          83,
+          439,
+          416,
+          110,
+          149,
+          152,
+          16,
+          299,
+          109,
+          312,
+          139,
+          237,
+          260,
+          318,
+          355,
+          248,
+          342,
+          19,
+          269,
+          226,
+          340,
+          3,
+          309,
+          125,
+          280,
+          286,
+          77,
+          184,
+          354,
+          420,
+          275,
+          294,
+          384,
+          182,
+          395,
+          80,
+          307,
+          258,
+          11,
+          331,
+          86,
+          266,
+          36,
+          423,
+          58,
+          41,
+          270,
+          50,
+          209,
+          352,
+          351,
+          368,
+          123,
+          222,
+          62,
+          379,
+          130,
+          187,
+          23,
+          43,
+          0,
+          201,
+          377,
+          98,
+          304,
+          429,
+          178,
+          256,
+          94,
+          409,
+          95,
+          390,
+          169,
+          69,
+          305,
+          48,
+          341,
+          207,
+          279,
+          227,
+          148,
+          143,
+          334,
+          180,
+          356,
+          131,
+          425,
+          440,
+          262,
+          324,
+          203,
+          84,
+          121,
+          383,
+          406,
+          91,
+          82,
+          267,
+          119,
+          358,
+          291,
+          57,
+          321,
+          257,
+          394,
+          42,
+          105,
+          408,
+          273,
+          392,
+          38,
+          53,
+          385,
+          128,
+          290,
+          28,
+          183,
+          370,
+          163,
+          151,
+          244,
+          202,
+          31,
+          32,
+          127,
+          185,
+          413,
+          288,
+          398,
+          402,
+          147,
+          285,
+          410,
+          177,
+          99,
+          338,
+          335,
+          197,
+          243,
+          115,
+          404,
+          265,
+          72,
+          333,
+          25,
+          165,
+          337,
+          426,
+          174,
+          428,
+          39,
+          193,
+          314,
+          396,
+          88,
+          70,
+          87,
+          292,
+          242,
+          277,
+          211,
+          9,
+          359,
+          195,
+          251,
+          323,
+          192,
+          117,
+          47,
+          172
+        ],
+        "mode": "full",
+        "verify_run": "44579147279"
+      }
     },
     "testIndex": {
       "type": "List ℕ",
       "meaning": "テストデータに入った行の番号",
       "verifier": "GitHub",
-      "query": "experiment_output"
+      "query": "experiment_output",
+      "verified": {
+        "value": [
+          362,
+          249,
+          271,
+          435,
+          400,
+          403,
+          12,
+          399,
+          198,
+          205,
+          78,
+          144,
+          298,
+          171,
+          268,
+          21,
+          194,
+          1,
+          10,
+          208,
+          76,
+          37,
+          388,
+          411,
+          289,
+          100,
+          261,
+          401,
+          319,
+          206,
+          375,
+          283,
+          373,
+          344,
+          287,
+          360,
+          179,
+          238,
+          434,
+          302,
+          158,
+          118,
+          339,
+          397,
+          330,
+          296,
+          164,
+          54,
+          157,
+          71,
+          284,
+          6,
+          343,
+          326,
+          159,
+          15,
+          320,
+          60,
+          282,
+          142,
+          56,
+          124,
+          107,
+          132,
+          382,
+          102,
+          160,
+          141,
+          186,
+          441,
+          90,
+          59,
+          347,
+          233,
+          427,
+          65,
+          438,
+          155,
+          122,
+          276,
+          188,
+          96,
+          170,
+          113,
+          381,
+          213,
+          134,
+          49,
+          52
+        ],
+        "mode": "full",
+        "verify_run": "44579147279"
+      }
     },
     "outputKeys": {
       "type": "List String",
       "meaning": "出力にある値の名前",
       "verifier": "GitHub",
-      "query": "experiment_output_keys"
+      "query": "experiment_output_keys",
+      "verified": {
+        "value": [
+          "nSamples",
+          "nFeatures",
+          "featureColumns",
+          "targetColumn",
+          "splitSeed",
+          "nTrain",
+          "nTest",
+          "trainIndex",
+          "testIndex",
+          "loadedXSha256",
+          "modelInputXSha256",
+          "trainDataSha256",
+          "testDataSha256",
+          "usedFeatureCount",
+          "fitSteps",
+          "polyDegree",
+          "nPolyFeatures",
+          "nInteractionFeatures",
+          "fitInputSha256",
+          "targetMean",
+          "targetStd",
+          "trainMse",
+          "trainRmse",
+          "trainMae",
+          "trainR2",
+          "testMse",
+          "testRmse",
+          "testMae",
+          "testR2",
+          "meanPredictorTestRmse",
+          "envCpuModel",
+          "envCpuLogicalCores",
+          "envMemoryGib",
+          "envPython",
+          "envNumpy",
+          "envScikitLearn"
+        ],
+        "mode": "full",
+        "verify_run": "44579147279"
+      }
     },
     "trainRmse": {
       "type": "ℚ",
       "meaning": "訓練データに対する RMSE",
       "verifier": "GitHub",
-      "query": "experiment_output"
+      "query": "experiment_output",
+      "verified": {
+        "value": "4749796803871979/100000000000000",
+        "mode": "full",
+        "verify_run": "44579147279"
+      }
     },
     "trainMse": {
       "type": "ℚ",
       "meaning": "訓練データに対する MSE",
       "verifier": "GitHub",
-      "query": "experiment_output"
+      "query": "experiment_output",
+      "verified": {
+        "value": "11280284839036233/5000000000000",
+        "mode": "full",
+        "verify_run": "44579147279"
+      }
     },
     "testRmse": {
       "type": "ℚ",
       "meaning": "テストデータに対する RMSE",
       "verifier": "GitHub",
-      "query": "experiment_output"
+      "query": "experiment_output",
+      "verified": {
+        "value": "12061752233912351/200000000000000",
+        "mode": "full",
+        "verify_run": "44579147279"
+      }
     },
     "testMse": {
       "type": "ℚ",
       "meaning": "テストデータに対する MSE",
       "verifier": "GitHub",
-      "query": "experiment_output"
+      "query": "experiment_output",
+      "verified": {
+        "value": "90928666845181/25000000000",
+        "mode": "full",
+        "verify_run": "44579147279"
+      }
     },
     "rmseSquaredTolerance": {
       "type": "ℚ",
@@ -861,55 +1586,100 @@
       "type": "String",
       "meaning": "モデルに入れた訓練データ（説明変数と目的変数）の SHA-256",
       "verifier": "GitHub",
-      "query": "experiment_output"
+      "query": "experiment_output",
+      "verified": {
+        "value": "7968ccfdb6b347591a4a86e80dc98088c8d74ccc118ef1c80694e02748c425e2",
+        "mode": "full",
+        "verify_run": "44579147279"
+      }
     },
     "polyDegree": {
       "type": "ℕ",
       "meaning": "多項式の次数",
       "verifier": "GitHub",
-      "query": "experiment_output"
+      "query": "experiment_output",
+      "verified": {
+        "value": 2,
+        "mode": "full",
+        "verify_run": "44579147279"
+      }
     },
     "nPolyFeatures": {
       "type": "ℕ",
       "meaning": "多項式に展開した後の変数の数",
       "verifier": "GitHub",
-      "query": "experiment_output"
+      "query": "experiment_output",
+      "verified": {
+        "value": 65,
+        "mode": "full",
+        "verify_run": "44579147279"
+      }
     },
     "nInteractionFeatures": {
       "type": "ℕ",
       "meaning": "展開した変数のうち，交互作用項の数",
       "verifier": "GitHub",
-      "query": "experiment_output"
+      "query": "experiment_output",
+      "verified": {
+        "value": 45,
+        "mode": "full",
+        "verify_run": "44579147279"
+      }
     },
     "fitInputSha256": {
       "type": "String",
       "meaning": "当てはめに渡したデータ（説明変数と目的変数）の SHA-256",
       "verifier": "GitHub",
-      "query": "experiment_output"
+      "query": "experiment_output",
+      "verified": {
+        "value": "7968ccfdb6b347591a4a86e80dc98088c8d74ccc118ef1c80694e02748c425e2",
+        "mode": "full",
+        "verify_run": "44579147279"
+      }
     },
     "trainMae": {
       "type": "ℚ",
       "meaning": "訓練データに対する MAE",
       "verifier": "GitHub",
-      "query": "experiment_output"
+      "query": "experiment_output",
+      "verified": {
+        "value": "3800780470289343/100000000000000",
+        "mode": "full",
+        "verify_run": "44579147279"
+      }
     },
     "trainR2": {
       "type": "ℚ",
       "meaning": "訓練データに対する R²",
       "verifier": "GitHub",
-      "query": "experiment_output"
+      "query": "experiment_output",
+      "verified": {
+        "value": "49375506710467/78125000000000",
+        "mode": "full",
+        "verify_run": "44579147279"
+      }
     },
     "testMae": {
       "type": "ℚ",
       "meaning": "テストデータに対する MAE",
       "verifier": "GitHub",
-      "query": "experiment_output"
+      "query": "experiment_output",
+      "verified": {
+        "value": "9281292593314383/200000000000000",
+        "mode": "full",
+        "verify_run": "44579147279"
+      }
     },
     "testR2": {
       "type": "ℚ",
       "meaning": "テストデータに対する R²",
       "verifier": "GitHub",
-      "query": "experiment_output"
+      "query": "experiment_output",
+      "verified": {
+        "value": "1816987092270219/6250000000000000",
+        "mode": "full",
+        "verify_run": "44579147279"
+      }
     }
   },
   "axioms": [
@@ -924,6 +1694,215 @@
     {
       "name": "Classical.choice",
       "reason": "Lean 本体の公理。空でない型から元を 1 つ取り出せる"
+    }
+  ],
+  "citations": [
+    {
+      "kind": "claim",
+      "cited": "ref1#R04_c1",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "status": "verified",
+      "verdict": "真",
+      "receives": "P",
+      "axiom": "Ref1.R04_c1_cited"
+    },
+    {
+      "kind": "claim",
+      "cited": "ref1#R08_c2",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "status": "verified",
+      "verdict": "真",
+      "receives": "P",
+      "axiom": "Ref1.R08_c2_cited"
+    },
+    {
+      "kind": "claim",
+      "cited": "ref1#R11_c1",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "status": "verified",
+      "verdict": "真",
+      "receives": "P",
+      "axiom": "Ref1.R11_c1_cited"
+    },
+    {
+      "kind": "claim",
+      "cited": "ref1#R12_c1",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "status": "verified",
+      "verdict": "真",
+      "receives": "P",
+      "axiom": "Ref1.R12_c1_cited"
+    },
+    {
+      "kind": "claim",
+      "cited": "ref1#R13_c1",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "status": "verified",
+      "verdict": "真",
+      "receives": "P",
+      "axiom": "Ref1.R13_c1_cited"
+    },
+    {
+      "kind": "claim",
+      "cited": "ref1#R14_c3",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "status": "verified",
+      "verdict": "真",
+      "receives": "P",
+      "axiom": "Ref1.R14_c3_cited"
+    },
+    {
+      "kind": "claim",
+      "cited": "ref1#R14_c4",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "status": "verified",
+      "verdict": "真",
+      "receives": "P",
+      "axiom": "Ref1.R14_c4_cited"
+    },
+    {
+      "kind": "claim",
+      "cited": "ref1#R15_c1",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "status": "verified",
+      "verdict": "真",
+      "receives": "P",
+      "axiom": "Ref1.R15_c1_cited"
+    },
+    {
+      "kind": "claim",
+      "cited": "ref1#R20_c1",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "status": "verified",
+      "verdict": "真",
+      "receives": "P",
+      "axiom": "Ref1.R20_c1_cited"
+    },
+    {
+      "kind": "claim",
+      "cited": "ref1#R26_c1",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "status": "verified",
+      "verdict": "真",
+      "receives": "P",
+      "axiom": "Ref1.R26_c1_cited"
+    },
+    {
+      "kind": "value",
+      "cited": "ref1#R01_c2.observedSha256",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "claim_status": "verified",
+      "claim_verdict": "真",
+      "verify_run": "44557745817",
+      "axiom": "Ref1.observedSha256_value"
+    },
+    {
+      "kind": "value",
+      "cited": "ref1#R04_c1.modelInputXSha256",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "claim_status": "verified",
+      "claim_verdict": "真",
+      "verify_run": "44557745817",
+      "axiom": "Ref1.modelInputXSha256_value"
+    },
+    {
+      "kind": "value",
+      "cited": "ref1#R06_c2.trainIndex",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "claim_status": "verified",
+      "claim_verdict": "真",
+      "verify_run": "44557745817",
+      "axiom": "Ref1.trainIndex_value"
+    },
+    {
+      "kind": "value",
+      "cited": "ref1#R06_c2.testIndex",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "claim_status": "verified",
+      "claim_verdict": "真",
+      "verify_run": "44557745817",
+      "axiom": "Ref1.testIndex_value"
+    },
+    {
+      "kind": "value",
+      "cited": "ref1#R20_c1.testMse",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "claim_status": "verified",
+      "claim_verdict": "真",
+      "verify_run": "44557745817",
+      "axiom": "Ref1.testMse_value"
+    },
+    {
+      "kind": "value",
+      "cited": "ref1#R26_c1.trainMse",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "claim_status": "verified",
+      "claim_verdict": "真",
+      "verify_run": "44557745817",
+      "axiom": "Ref1.trainMse_value"
+    },
+    {
+      "kind": "value",
+      "cited": "ref1#R26_c1.trainRmse",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "claim_status": "verified",
+      "claim_verdict": "真",
+      "verify_run": "44557745817",
+      "axiom": "Ref1.trainRmse_value"
+    },
+    {
+      "kind": "value",
+      "cited": "ref1#R26_c1.trainMae",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "claim_status": "verified",
+      "claim_verdict": "真",
+      "verify_run": "44557745817",
+      "axiom": "Ref1.trainMae_value"
+    },
+    {
+      "kind": "value",
+      "cited": "ref1#R26_c1.trainR2",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "claim_status": "verified",
+      "claim_verdict": "真",
+      "verify_run": "44557745817",
+      "axiom": "Ref1.trainR2_value"
+    },
+    {
+      "kind": "value",
+      "cited": "ref1#R26_c1.testMse",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "claim_status": "verified",
+      "claim_verdict": "真",
+      "verify_run": "44557745817",
+      "axiom": "Ref1.testMse_value"
+    },
+    {
+      "kind": "value",
+      "cited": "ref1#R26_c1.testRmse",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "claim_status": "verified",
+      "claim_verdict": "真",
+      "verify_run": "44557745817",
+      "axiom": "Ref1.testRmse_value"
+    },
+    {
+      "kind": "value",
+      "cited": "ref1#R26_c1.testMae",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "claim_status": "verified",
+      "claim_verdict": "真",
+      "verify_run": "44557745817",
+      "axiom": "Ref1.testMae_value"
+    },
+    {
+      "kind": "value",
+      "cited": "ref1#R26_c1.testR2",
+      "commit": "bc1e74fa8ca0e776724fff18c471d0e627540c1c",
+      "claim_status": "verified",
+      "claim_verdict": "真",
+      "verify_run": "44557745817",
+      "axiom": "Ref1.testR2_value"
     }
   ]
 }
